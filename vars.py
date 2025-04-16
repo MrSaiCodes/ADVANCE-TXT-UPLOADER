@@ -1,8 +1,9 @@
-# Don't Remove Credit Tg - @Tushar0125
-# Ask Doubt on telegram @Tushar0125
 
 from os import environ
 
-API_ID = int(environ.get("API_ID", "24473318")) #Replace with your api id
-API_HASH = environ.get("API_HASH", "e7dd0576c5ac0ff8f90971d6bb04c8f5") #Replace with your api hash
-BOT_TOKEN = environ.get("BOT_TOKEN", "7832139892:AAFBRTPblJR6H-cWl7E6i6zFtP_4gfrm9Uo") #Replace with your bot token
+API_ID = int(environ.get("API_ID", "22410340"))  # API ID
+API_HASH = environ.get("API_HASH", "633122e0c3b0100c2ec829e8a52e6a51")  # API HASH
+BOT_TOKEN = environ.get("BOT_TOKEN", "7921256918:AAEswo_iUwYYvJFaRK-rcVXgU8youFWc7b4")  # Bot Token
+OWNER_ID = int(environ.get("OWNER_ID", "662494886"))  # Telegram User ID
+DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./downloads")  # Default download location
+TG_MAX_FILE_SIZE = int(environ.get("TG_MAX_FILE_SIZE", "2000000000"))  # Max file size for Telegram uploads
