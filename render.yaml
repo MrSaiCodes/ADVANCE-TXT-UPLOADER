@@ -1,11 +1,28 @@
-build:
-  docker:
-    worker: Dockerfile
-run:
-  worker: python3 main.py
- 
- # for heroku deployment...add this bulidpack.  
+services:
+  - type: web
+    name: advance-txt-uploader
+    runtime: python
+    repo: https://github.com/MrSaiCodes/ADVANCE-TXT-UPLOADER
+    branch: main
+    plan: free
+    region: oregon
 
-#  https://github.com/heroku/heroku-buildpack-activestorage-preview
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
 
-#   https://github.com/heroku/heroku-buildpack-apt
+    startCommand: python app.py
+
+    envVars:
+      - key: BOT_TOKEN
+        value: 7921256918:AAEswo_iUwYYvJFaRK-rcVXgU8youFWc7b4
+      - key: API_ID
+        value: 22410340
+      - key: API_HASH
+        value: 633122e0c3b0100c2ec829e8a52e6a51
+      - key: OWNER_ID
+        value: 662494886
+      - key: DOWNLOAD_LOCATION
+        value: ./downloads
+      - key: TG_MAX_FILE_SIZE
+        value: 2000000000
